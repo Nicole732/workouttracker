@@ -2,11 +2,12 @@
 
 const db = require("../models");
 
-module.exports = app => {
+module.exports = (app) => {
   //get api/workouts
   app.get("/api/workouts", (req, res) => {
-    db.Workout.find({})
+    db.Workout.find()
       .then(dbWorkout => {
+        console.log(dbWorkout);
         res.json(dbWorkout);
       })
       .catch(err => {
@@ -29,6 +30,7 @@ module.exports = app => {
   // put rpute
   app.put("/api/workouts/:id", (req, res) => {
     db.Workout.findByIdAndUpdate(
+        
       req.params.id,
       {
         $push: { exercises: req.body }
