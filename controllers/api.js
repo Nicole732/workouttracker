@@ -2,14 +2,16 @@
 
 const db = require("../models");
 
-module.exports = (app) => {
+module.exports = app => {
   //get api/workouts
   app.get("/api/workouts", (req, res) => {
     db.Workout.find({})
-    .then(dbWorkout => {
+      .then(dbWorkout => {
         res.json(dbWorkout);
-    })
-    .catch(err => { res.json(err)});
+      })
+      .catch(err => {
+        res.json(err);
+      });
   });
 
   // put api/workouts/:id

@@ -5,14 +5,15 @@ const mongoose = require("mongoose");
 
 const app = express();
 
+const PORT = process.env.PORT || 3000;
 
+app.use(logger("dev"))
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
-app.use(logger("dev"))
 app.use(express.static("public"));
 
-const PORT = process.env.PORT || 3000;
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", { useNewUrlParser: true });
+//mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout");
 
 require("./controllers/html.js")(app);
 //app.use(require("./controllers/html.js"));
