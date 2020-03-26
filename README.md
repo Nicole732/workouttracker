@@ -21,6 +21,9 @@ The deployed application is available at: https://intense-sands-84281.herokuapp.
 ## Demo
 
 Some screenshots of the app:\
+<img width="629" alt="Screen Shot 2020-03-26 at 10 10 19 AM" src="https://user-images.githubusercontent.com/58992132/77656438-40952280-6f4a-11ea-8f0f-b00b0a714d50.png">
+<img width="584" alt="Screen Shot 2020-03-26 at 10 25 40 AM" src="https://user-images.githubusercontent.com/58992132/77657824-32e09c80-6f4c-11ea-9621-76e499860c5b.png">
+<img width="939" alt="Screen Shot 2020-03-26 at 10 10 37 AM" src="https://user-images.githubusercontent.com/58992132/77656436-3ffc8c00-6f4a-11ea-933c-324d3d44da60.png">
 
 
 ## Usage
