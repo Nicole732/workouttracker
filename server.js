@@ -21,7 +21,10 @@ require("./controllers/api.js")(app);
 //app.use(require("./controllers/api.js"));
 
 const mongoose = require("mongoose");
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost:27017/workout", { useNewUrlParser: true });
+mongoose.connect("mongodb://localhost/workout", {
+  useNewUrlParser: true,
+  useFindAndModify: false
+});
 
 //testing DB connection
 const db = mongoose.connection;
